@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="modal.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 2rem;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <demo-modal>
+        <p slot="content">Modal content</p>
+    </demo-modal>
+    <p>Please confirm your choice</p>
+    <button>Click me</button>
+
+    <script>
+        const button = document.querySelector('button')
+        const modal = document.querySelector('demo-modal')
+
+        modal.addEventListener('confirmClicked', () => {
+            console.log('confirm is clicked')
+        })
+
+        modal.addEventListener('cancelClicked', () => {
+            console.log('cancel is clicked')
+        })
+        button.addEventListener("click", () => {
+            modal.open()
+        })
+    </script>
+</body>
+</html>

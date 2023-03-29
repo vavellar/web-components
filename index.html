@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Components</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            --color-primary: lightblue;
+            font-family: sans-serif;
+        }
+
+    </style>
+    <script src="tooltip.js"></script>
+    <script src="confirm-link.js"></script>
+    <script src="magic-button.js"></script>
+</head>
+<body>
+    <p>
+        <demo-tooltip class="important" text="something text here">
+            <span class="highlight">web components</span>
+        </demo-tooltip>
+        are awesome
+    </p>
+    <demo-tooltip></demo-tooltip>
+    <a is="demo-confirm-link" href="https://google.com">Google</a>
+    <demo-magic-button>test</demo-magic-button>
+    <demo-magic-button text="click and see the magic happens">hello world</demo-magic-button>
+</body>
+</html>
